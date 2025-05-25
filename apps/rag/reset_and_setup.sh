@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+
+# --- Original docker setup ---
 echo "🧹 Cleaning up existing Docker containers..."
 docker-compose down -v
 
@@ -29,6 +32,7 @@ else
     echo "✅ Docker is already running."
 fi
 
+# --- Ollama check ---
 echo "🧠 Checking for local Ollama CLI..."
 if ! command -v ollama &> /dev/null; then
     echo "❌ Ollama CLI is not installed on your Mac."
@@ -52,12 +56,13 @@ else
     fi
 fi
 
+# --- Start docker containers ---
 echo "🐳 Starting Docker containers for Ollama and Streamlit..."
 docker-compose up -d --build
 
-echo "⏳ Waiting for containers to become ready..."
 sleep 5
 
+# --- Check Ollama ---
 echo "🔍 Checking if Ollama container is responding..."
 if curl -s http://localhost:11434/api/tags > /dev/null; then
     echo "✅ Ollama container is up and reachable at http://localhost:11434"
@@ -67,11 +72,42 @@ else
     exit 1
 fi
 
-echo "✅ ✅ ✅ All components are up and running!"
-echo "-------------------------------------------------"
-echo "Next Steps:"
-echo "👉 Open your browser: http://localhost:8501"
-echo "👉 Log in: admin / adminpass"
-echo "👉 Upload a document: data/sample.txt"
-echo "👉 Ask a question about the document"
-echo "-------------------------------------------------"
+# --- Healthcheck for local iframe services ---
+echo "🛠 Checking ttyd, Flask editor, and Streamlit..."
+function check_port {
+  local port=$1
+  local label=$2
+  if lsof -i :$port &>/dev/null; then
+    echo "$label already running on $port"
+  else
+    echo "$label not running — launching..."
+    case $port in
+      7681)
+        ttyd bash &
+        ;;
+      5050)
+        export FLASK_APP=editor.py
+        flask run --port=5050 &
+        ;;
+      8501)
+        (cd apps/rag && streamlit run app.py &)
+        ;;
+    esac
+  fi
+}
+
+check_port 7681 "Local terminal (ttyd)"
+check_port 5050 "sample.txt editor (Flask)"
+check_port 8501 "Streamlit UI"
+
+# --- Start local web server for HTML testing ---
+echo "🧪 Starting local web server at http://localhost:8080"
+python3 -m http.server 8080 &
+
+# --- Auto-open demo page in default browser ---
+sleep 2
+URL="http://localhost:8080/docs/html/ragdemo.html"
+echo "🌐 Opening RAG demo in browser: $URL"
+open "$URL"
+
+wait

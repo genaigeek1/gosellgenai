@@ -1,0 +1,43 @@
+
+# fly.toml generated for hosting RAG demo backend
+app = "rag-backend-demo"
+
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  STREAMLIT_SERVER_PORT = "8501"
+  STREAMLIT_SERVER_HEADLESS = "true"
+  STREAMLIT_SERVER_ENABLE_CORS = "false"
+  STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION = "false"
+
+[[services]]
+  internal_port = 8501
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+
+  [[services.ports]]
+    port = 443
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"
+
+[[services]]
+  internal_port = 8900
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 8900
+
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"

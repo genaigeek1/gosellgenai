@@ -1,27 +1,15 @@
-version: "3.9"
+
+version: '3.9'
 
 services:
-  ollama:
-    image: ollama/ollama
-    ports:
-      - "11434:11434"
-    volumes:
-      - ~/.ollama:/root/.ollama
-    restart: unless-stopped
-
   rag-app:
-    build:
-      context: .
+    build: .
     ports:
       - "8501:8501"
     volumes:
       - .:/app
-    working_dir: /app
-    command: streamlit run streamlit_app/app.py
-    depends_on:
-      - ollama
     environment:
-      - PYTHONUNBUFFERED=1
-      - MODEL_NAME=mistral
-      - EMBEDDING_MODEL=all-MiniLM-L6-v2
-      - OLLAMA_HOST=http://ollama:11434
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_ENABLE_CORS=false
+      - STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION=false
+    command: streamlit run app.py
