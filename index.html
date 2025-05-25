@@ -8,290 +8,69 @@
   </title>
   <style>
    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #f9f9f9;
-      color: #202124;
-    }
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-      gap: 1rem;
-    }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo {
-      height: 50px;
-    }
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 500;
-      margin: 0;
-    }
-    .profile-tile {
-      display: flex;
-      align-items: center;
-      background: white;
-      border-radius: 12px;
-      padding: 0.5rem 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .profile-tile:hover {
-      transform: scale(1.03);
-    }
-    .profile-logo {
-      height: 28px;
-      margin-right: 0.5rem;
-    }
-    .profile-photo {
-      height: 36px;
-      width: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-left: 0.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, auto);
-      gap: 2rem;
-      min-height: 80vh;
-    }
-    .journey-tile {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      padding: 1rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .journey-tile:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    .tile-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 0.5rem;
-    }
-    .tile-title {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin: 0;
-    }
-    .coming-soon {
-      font-size: 1.2rem;
-      text-align: center;
-      padding: 2rem;
-      color: #888;
-      animation: blink 2s infinite;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-    @media (max-width: 1024px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f9f9f9;
+  color: #202124;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
+}
+
+.header-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 2rem;
+  align-items: stretch;
 }
 
 .journey-tile {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%;
-}
-
-.journey-tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-}
-
-.journey-tile img {
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-top: 0.75rem;
-}
-  
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-  justify-content: center;
-  align-items: start;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.journey-tile {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
   height: 100%;
   min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-}
-
-.journey-tile:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.journey-tile img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-top: 0.75rem;
-}
-  
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  align-items: start;
-}
-
-.journey-tile {
-  height: 100%;
-  min-height: 300px;
-  max-height: 360px;
+  max-height: 340px;
   overflow: hidden;
-  padding: 1rem;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   transition: all 0.3s ease;
-}
-
-.tile-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: space-between;
-  margin-bottom: 0.25rem;
-}
-
-.journey-tile img {
-  max-height: 120px;
-  width: auto;
-  margin-top: 0.3rem;
-  object-fit: contain;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: start;
-}
-
-.journey-tile {
-  padding: 1rem;
-  min-height: 180px;
-  max-height: 220px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: box-shadow 0.2s ease;
-}
-
-.journey-tile:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.tile-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-  
-/* Clean and consistent grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.75rem;
-  padding: 2rem;
-  max-width: 1440px;
-  margin: 0 auto;
-  align-items: start;
-  justify-content: center;
-}
-
-/* Uniform tiles */
-.journey-tile {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
-  max-height: 220px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .journey-tile:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.journey-tile img {
+  width: 95%;
+  max-height: 200px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .tile-header {
@@ -306,116 +85,58 @@
   font-weight: 600;
   margin: 0;
 }
-  
-.header-container {
-  max-width: 1440px;
-  margin: 0 auto 2rem auto;
-  padding: 0 2rem;
-}
 
-.grid {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.75rem;
-  align-items: start;
-  justify-content: center;
-}
-
-.journey-tile {
-  background: white;
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+.profile-tile {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 280px;
-  max-height: 360px;
-  overflow: hidden;
-}
-
-.journey-tile img {
-  width: 90%;
-  height: auto;
-  max-height: 160px;
-  margin: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 8px;
-}
-  
-/* Fix for tile bumping issue */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1440px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: start;
-}
-
-.journey-tile {
+  align-items: center;
+  gap: 0.5rem;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-tile img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.profile-tile img[alt="Profile"] {
+  width: 24px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .profile-tile {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.header-container > div:last-child {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 280px;
-  max-height: 320px;
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.journey-tile img {
-  width: 90%;
-  max-height: 140px;
-  margin: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 8px;
-}
-  
-.journey-tile {
-  min-height: 260px;
-  max-height: 300px;
-  overflow-y: auto;
-}
-  
-/* Final tile height adjustment */
-.journey-tile {
-  min-height: 240px;
-  max-height: 280px;
-  overflow: hidden;
-  padding: 1rem;
-}
-
-/* Tighter image max-height */
-.journey-tile img {
-  max-height: 120px;
-  margin-top: 0.25rem;
-}
-  
-/* Unify tile height visually */
-.journey-tile {
-  height: 280px;
-  overflow: hidden;
-  justify-content: space-between;
-}
-
-.journey-tile img {
-  max-height: 120px;
-  margin-top: 0.5rem;
-  object-fit: contain;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
 }
   </style>
  </head>
@@ -426,23 +147,23 @@
      GoSell
     </span>
     <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
-     <img alt="Palo Alto Logo" class="logo" src="docs/images/paloalto.png"/>
+     <img alt="Palo Alto Logo" class="logo" src="docs/images/paloalto.png" style="height: 40px; width: auto; max-width: 100%; object-fit: contain;"/>
     </a>
    </div>
    <div style="display: flex; gap: 0.75rem;">
-    <a class="profile-tile" href="https://www.linkedin.com/in/genaigeek/" target="_blank">
-     <img alt="LinkedIn Logo" class="profile-logo" src="docs/images/linkedin.png"/>
+    <a class="profile-tile" href="https://www.linkedin.com/in/genaigeek/" style="display: flex; align-items: center; gap: 0.5rem; background: white; border-radius: 12px; padding: 0.5rem 0.75rem; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" target="_blank">
+     <img alt="LinkedIn" src="docs/images/linkedin.png" style="height: 24px;"/>
      <span>
       LinkedIn
      </span>
-     <img alt="Profile Photo" class="profile-photo" src="docs/images/genaigeek.jpeg"/>
+     <img alt="Profile" src="docs/images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
     </a>
-    <a class="profile-tile" href="https://github.com/genaigeek1" target="_blank">
-     <img alt="GitHub Logo" class="profile-logo" src="docs/images/github.svg"/>
+    <a class="profile-tile" href="https://github.com/genaigeek1" style="display: flex; align-items: center; gap: 0.5rem; background: white; border-radius: 12px; padding: 0.5rem 0.75rem; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" target="_blank">
+     <img alt="GitHub" src="docs/images/github.svg" style="height: 24px;"/>
      <span>
       GitHub
      </span>
-     <img alt="Profile Photo" class="profile-photo" src="docs/images/genaigeek.jpeg"/>
+     <img alt="Profile" src="docs/images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
     </a>
    </div>
   </div>
@@ -531,48 +252,16 @@
     <div class="journey-tile">
      <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
       <span class="tile-title">
-       RAG Demo
+       Gen AI Demos
       </span>
       <div style="display: flex; align-items: center; gap: 0.25rem;">
        <img src="docs/images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
        <span>
-        6 Minutes
+        15 Minutes
        </span>
       </div>
      </div>
      <img alt="Resume" src="docs/images/ragaidemo.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
-    </div>
-   </a>
-   <a href="docs/html/agenticdemo.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
-    <div class="journey-tile">
-     <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="tile-title">
-       Agentic AI Demo
-      </span>
-      <div style="display: flex; align-items: center; gap: 0.25rem;">
-       <img src="docs/images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
-       <span>
-        6 Minutes
-       </span>
-      </div>
-     </div>
-     <img alt="Resume" src="docs/images/agenticaidemo.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
-    </div>
-   </a>
-   <a href="docs/html/qa.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
-    <div class="journey-tile">
-     <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="tile-title">
-       Q &amp; A
-      </span>
-      <div style="display: flex; align-items: center; gap: 0.25rem;">
-       <img src="docs/images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
-       <span>
-        6 Minutes
-       </span>
-      </div>
-     </div>
-     <img alt="Resume" src="docs/images/qa.jpg" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
     </div>
    </a>
   </div>
