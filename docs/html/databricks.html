@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Markmap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 3rem; }
+    footer { margin-top: 4rem; text-align: center; color: #666; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GoSellAI</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="my-5">
+      
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:x,mm:K}=window,P=new x.Toolbar;P.attach(K);const F=P.render();F.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(F)})})()</script><script>((b,L,T,D)=>{const H=b();window.mm=H.Markmap.create("svg#mindmap", Object.assign((L||H.deriveOptions)(D), { initialExpandLevel: 3 }), T)})(()=>window.markmap,null,{"content":"Databricks Organization Structure","children":[{"content":"Account Level","children":[{"content":"Centralized billing (DBUs)","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"Identity and Access Management (IAM)","children":[{"content":"Users","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"Groups","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"Service Principals","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"Personal Access Tokens (PATs)","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"5,10"}},{"content":"Unity Catalog (shared governance, metastore)","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Catalog Explorer","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"REST APIs and CLI","children":[],"payload":{"tag":"li","lines":"12,14"}}],"payload":{"tag":"h2","lines":"3,4"}},{"content":"Workspace 1: Data Engineering","children":[{"content":"Interfaces","children":[{"content":"UI","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"CLI","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"Notebooks","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"Git Folder (Repos)","children":[],"payload":{"tag":"li","lines":"20,22"}}],"payload":{"tag":"h3","lines":"16,17"}},{"content":"Compute","children":[{"content":"All-purpose Clusters","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"Pools","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"Databricks Runtime","children":[],"payload":{"tag":"li","lines":"25,27"}}],"payload":{"tag":"h3","lines":"22,23"}},{"content":"Data Management","children":[{"content":"Unity Catalog","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"Catalogs &#x2192; Schemas &#x2192; Tables &#x2192; Views","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"Volumes for non-tabular data","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"Delta Tables (ACID, schema evolution)","children":[],"payload":{"tag":"li","lines":"31,33"}}],"payload":{"tag":"h3","lines":"27,28"}},{"content":"Pipelines","children":[{"content":"DLT Pipelines","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"Jobs","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Execution Context (Python, Scala, SQL, R)","children":[],"payload":{"tag":"li","lines":"36,38"}}],"payload":{"tag":"h3","lines":"33,34"}}],"payload":{"tag":"h2","lines":"14,15"}},{"content":"Workspace 2: Machine Learning &amp; AI","children":[{"content":"Core Tools","children":[{"content":"Databricks Runtime for ML","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"Mosaic AI","children":[],"payload":{"tag":"li","lines":"42,43"}},{"content":"AI Playground","children":[],"payload":{"tag":"li","lines":"43,45"}}],"payload":{"tag":"h3","lines":"40,41"}},{"content":"ML Lifecycle","children":[{"content":"Experiments (MLflow)","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"Feature Store","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"Model Registry","children":[],"payload":{"tag":"li","lines":"48,49"}},{"content":"Model Serving (Mosaic AI)","children":[],"payload":{"tag":"li","lines":"49,51"}}],"payload":{"tag":"h3","lines":"45,46"}}],"payload":{"tag":"h2","lines":"38,39"}},{"content":"Workspace 3: Data Warehousing","children":[{"content":"SQL &amp; BI Interfaces","children":[{"content":"SQL Editor","children":[],"payload":{"tag":"li","lines":"54,55"}},{"content":"Dashboards","children":[],"payload":{"tag":"li","lines":"55,56"}},{"content":"Visualizations","children":[],"payload":{"tag":"li","lines":"56,58"}}],"payload":{"tag":"h3","lines":"53,54"}},{"content":"Compute","children":[{"content":"SQL Warehouses (Classic, Pro, Serverless)","children":[],"payload":{"tag":"li","lines":"59,61"}}],"payload":{"tag":"h3","lines":"58,59"}},{"content":"Management","children":[{"content":"Query history","children":[],"payload":{"tag":"li","lines":"62,63"}},{"content":"Access controls via Unity Catalog","children":[],"payload":{"tag":"li","lines":"63,64"}},{"content":"BI tool integrations","children":[],"payload":{"tag":"li","lines":"64,66"}}],"payload":{"tag":"h3","lines":"61,62"}}],"payload":{"tag":"h2","lines":"51,52"}},{"content":"Shared Across All Workspaces","children":[{"content":"Unity Catalog Metastore","children":[],"payload":{"tag":"li","lines":"67,68"}},{"content":"Access Control Lists (ACLs)","children":[],"payload":{"tag":"li","lines":"68,69"}},{"content":"Central lineage and auditing","children":[],"payload":{"tag":"li","lines":"69,70"}},{"content":"Governed Data Sharing","children":[],"payload":{"tag":"li","lines":"70,71"}}],"payload":{"tag":"h2","lines":"66,67"}}],"payload":{"tag":"h1","lines":"1,2"}},null)</script>
+
+    </div>
+  </main>
+
+  <footer class="container">
+    <hr/>
+    <p>&copy; 2025 GoSellAI. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+[
+  "tests/test_chunkers.py::test_basic_chunking",
+  "tests/test_embeddings.py::test_embedding_vector_shape",
+  "tests/test_loaders.py::test_load_txt_file",
+  "tests/test_rerankers.py::test_reranker_placeholder",
+  "tests/test_retriever.py::test_retrieval"
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "question": "What is the capital of the country whose president is Emmanuel Macron?",
+    "answer": "Paris",
+    "context": [
+      [
+        "France",
+        [
+          "France is in Europe.",
+          "The capital of France is Paris."
+        ]
+      ],
+      [
+        "Emmanuel Macron",
+        [
+          "Macron is the president of France."
+        ]
+      ]
+    ]
+  },
+  {
+    "question": "Where is the Eiffel Tower located?",
+    "answer": "Paris",
+    "context": [
+      [
+        "Eiffel Tower",
+        [
+          "The Eiffel Tower is a landmark in Paris, France."
+        ]
+      ],
+      [
+        "Landmarks",
+        [
+          "Landmarks often represent cities."
+        ]
+      ]
+    ]
+  }
+]
