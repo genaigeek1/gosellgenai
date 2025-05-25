@@ -60,10 +60,35 @@
       object-fit: cover;
       margin-left: 0.5rem;
     }
-    .grid { height: 80vh; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.5rem;
+    .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; min-height: 80vh;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-template-rows: repeat(3, auto);    /* 3 rows, auto height */
       gap: 2rem;
+      min-height: 80vh;
+    }
+    .journey-tile {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .journey-tile:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    .tile-duration {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; /* Space between icon and text */
+      color: #5f6368; /* Or a suitable color */
+      margin-top: 0.5rem; /* Space above the duration line */
     }
     .tile { height: 100%; display: flex; flex-direction: column; justify-content: space-between;
       background: white;
@@ -123,6 +148,17 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
     }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+      }
+    }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+      }
+    }
   </style>
 </head>
 <body>
@@ -145,57 +181,83 @@
 </div>
 </div>
 <div class="grid">
-<a class="tile" href="docs/Elastic.html">
-<div class="tile-content">
-<div class="tile-header">
-<img alt="Elastic Logo" src="docs/images/elastic.svg"/>
-<div class="tile-title">GenAI Professional Services Mindmap</div>
-</div>
-<div class="tile-description">
-    Covers Professional Services, Elastic Platform and Gen AI Opportunities.
-  </div>
-</div>
-<img alt="Elastic Mindmap" class="main" src="docs/images/img_elastic_mindmap.png"/>
-</a>
-<a class="tile" href="docs/MultiAgentAIEnterprise.html">
-<div class="tile-content">
-<div class="tile-header">
-<img alt="GCP Logo" src="docs/images/gcp.svg"/>
-<img alt="LangChain Logo" src="docs/images/langchain.svg"/>
-<div class="tile-title">Multi Agent AI in the Enterprise</div>
-</div>
-<div class="tile-description">
-    Google Vertex AI Agentic Capability vs Open Source LangChain Ecosystems.
-  </div>
-</div>
-<img alt="Multi-Agent AI Mindmap" class="main" src="docs/images/multiagent_ai_enterprise.png"/>
-</a>
-<a class="tile" href="docs/databricks.html">
-<div class="tile-content">
-<div class="tile-header">
-<img alt="Databricks Logo" src="docs/images/databricks.png"/>
-<div class="tile-title">Databricks Mindmap</div>
-</div>
-<div class="tile-description">
-    Managing a Unified GenAI, MLOps, DataOps Organization.
-  </div>
-</div>
-<img alt="Databricks Mindmap" class="main" src="docs/images/img_databricks_mindmap.png"/>
-</a>
-
-<a class="tile" href="docs/GeminiUpgrade2To25.html">
-  <div class="tile-content">
+  <div class="journey-tile">
     <div class="tile-header">
-      <img alt="Google Logo" src="docs/images/gcp.svg"/>
-      <div class="tile-title">Gemini Upgrade</div>
+      <span class="tile-title">Introduction</span>
     </div>
-    <div class="tile-description">
-      upgrade path for your Gen AI apps to Gemini 2.x and beyond
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>3 minutes</span>
     </div>
   </div>
-  <img alt="Gemini Upgrade Mindmap" class="main" src="docs/images/img_gemini_mindmap.png"/>
-</a>
-
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">GTM</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">Presales</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">Delivery</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">AI Safety Framework</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">Agentic/RAG Demo</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
+  <div class="journey-tile">
+    <div class="tile-header">
+      <span class="tile-title">Q&A</span>
+    </div>
+    <div class="tile-duration">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock tile-duration-icon" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg> <span>7 minutes</span>
+    </div>
+  </div>
 </div>
 </div>
 </body>
