@@ -138,6 +138,45 @@
   gap: 1rem;
   justify-content: flex-end;
 }
+  
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.journey-tile {
+  min-height: 380px;
+  max-height: 480px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-tile.expanded {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  max-height: none;
+  z-index: 9999;
+  background: white;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.journey-tile img {
+  max-height: 280px;
+  width: 90%;
+}
+
+body.expanded-mode {
+  overflow: hidden;
+}
   </style>
  </head>
  <body>
@@ -146,61 +185,113 @@
     <span style="font-size: 1.8rem; font-weight: bold; color: #333;">
      GoSell
     </span>
-    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: black;">
-     <img alt="Palo Alto Logo" class="logo" src="docs/images/paloalto.png" style="height: 40px; width: auto; max-width: 100%; object-fit: contain;"/>
+    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none; color: black; margin-left: 1rem;">
+     <img alt="Palo Alto Logo" class="logo" src="../images/paloalto.png" style="height: 40px; width: auto; max-width: 100%; object-fit: contain;"/>
     </a>
    </div>
    <div style="display: flex; gap: 0.75rem;">
     <a class="profile-tile" href="https://www.linkedin.com/in/genaigeek/" style="display: flex; align-items: center; gap: 0.5rem; background: white; border-radius: 12px; padding: 0.5rem 0.75rem; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" target="_blank">
-     <img alt="LinkedIn" src="docs/images/linkedin.png" style="height: 24px;"/>
+     <img alt="LinkedIn" src="../images/linkedin.png" style="height: 24px;"/>
      <span>
       LinkedIn
      </span>
-     <img alt="Profile" src="docs/images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
+     <img alt="Profile" src="../images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
     </a>
     <a class="profile-tile" href="https://github.com/genaigeek1" style="display: flex; align-items: center; gap: 0.5rem; background: white; border-radius: 12px; padding: 0.5rem 0.75rem; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" target="_blank">
-     <img alt="GitHub" src="docs/images/github.svg" style="height: 24px;"/>
+     <img alt="GitHub" src="../images/github.svg" style="height: 24px;"/>
      <span>
       GitHub
      </span>
-     <img alt="Profile" src="docs/images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
+     <img alt="Profile" src="../images/genaigeek.jpeg" style="height: 24px; width: 24px; border-radius: 50%;"/>
     </a>
    </div>
   </div>
   <div class="grid">
-  
-   <a href="docs/html/presales.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
+   <a href="docs/html/aisafetyframework.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
     <div class="journey-tile">
      <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
       <span class="tile-title">
-       Presales
+       Secure AI with AI
       </span>
       <div style="display: flex; align-items: center; gap: 0.25rem;">
-       <img src="docs/images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
+       <img src="../images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
        <span>
         6 Minutes
        </span>
       </div>
      </div>
-     <img alt="Resume" src="docs/images/presales.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
+     <img alt="Resume" src="../images/secureai.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
     </div>
    </a>
    <a href="docs/html/ragdemov2.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
     <div class="journey-tile">
      <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
       <span class="tile-title">
-       Gen AI Demos
+       RAG Demo
       </span>
       <div style="display: flex; align-items: center; gap: 0.25rem;">
-       <img src="docs/images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
+       <img src="../images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
        <span>
-        15 Minutes
+        6 Minutes
        </span>
       </div>
      </div>
-     <img alt="Resume" src="docs/images/ragaidemo.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
+     <img alt="Resume" src="../images/ragaidemo.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
+    </div>
+   </a>
+   <a href="docs/html/agenticdemo.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
+    <div class="journey-tile">
+     <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="tile-title">
+       Agentic AI Demo
+      </span>
+      <div style="display: flex; align-items: center; gap: 0.25rem;">
+       <img src="../images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
+       <span>
+        6 Minutes
+       </span>
+      </div>
+     </div>
+     <img alt="Resume" src="../images/agenticaidemo.png" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
+    </div>
+   </a>
+   <a href="docs/html/qa.html" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%;">
+    <div class="journey-tile">
+     <div class="tile-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="tile-title">
+       Q &amp; A
+      </span>
+      <div style="display: flex; align-items: center; gap: 0.25rem;">
+       <img src="../images/clock.png" style="height: 1rem; width: auto; vertical-align: middle; margin-left: 0.5rem;"/>
+       <span>
+        6 Minutes
+       </span>
+      </div>
+     </div>
+     <img alt="Resume" src="../images/qa.jpg" style="width: 80%; height: 80%; object-fit: contain; margin: auto; border-radius: 8px; display: block;"/>
     </div>
    </a>
   </div>
+  <script>
+   document.querySelectorAll('.journey-tile').forEach(tile => {
+  tile.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!tile.classList.contains('expanded')) {
+      document.body.classList.add('expanded-mode');
+      tile.classList.add('expanded');
+    }
+  });
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    const expandedTile = document.querySelector('.journey-tile.expanded');
+    if (expandedTile) {
+      expandedTile.classList.remove('expanded');
+      document.body.classList.remove('expanded-mode');
+    }
+  }
+});
+  </script>
  </body>
 </html>
