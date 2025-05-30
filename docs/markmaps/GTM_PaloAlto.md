@@ -1,51 +1,92 @@
-# GTM Practices Aligned with Palo Alto Networks Solution Architecture
+---
+title: GTMStrategy
+markmap:
+  colorFreezeLevel: 2
+  initialExpandLevel: 2
+---
 
-## Customer-Centric Value Propositions
-- High-value use cases by industry
-- ROI, compliance, business risk reduction
-- **Palo Alto**: AI-powered Zero Trust solutions for FSI, Healthcare, Public Sector
+# GoSellGCP
 
-## Solution-Based Selling
-- Sell secure outcomes, not point products
-- Integrated platforms: cloud, network, endpoint
-- **Palo Alto**: Prisma Cloud + Cortex + SASE = Secure Cloud-Native AI
-
-## Technical Enablement & Demos
-- PoVs, hackathons, demo days
-- GenAI playgrounds, cyber range labs
-- **Palo Alto**: PAN Labs + AI Copilot demos simulate attack & detection
-
-## Partner Ecosystem Leverage
-- MSSPs, resellers, marketplaces
-- Co-sell with CSPs, ISVs, SIs
-- **Palo Alto**: Bundle Prisma Cloud on AWS/GCP, embed Cortex in MSSP playbooks
-
-## Vertical Specialization
-- Solution patterns for regulated verticals
-- Compliance: HIPAA, FedRAMP, PCI
-- **Palo Alto**: Prisma SD-WAN, SASE tailored to public sector & healthcare
-
-## Customer Success GTM Loop
-- Align SE, CSM, and Architect delivery
-- Delivery insights inform pre-sales
-- **Palo Alto**: XSOAR + telemetry = AI maturity storytelling
-
-## AI-Driven Co-Innovation
-- Launch secure AI PoCs
-- Sandbox GenAI use cases with key customers
-- **Palo Alto**: AI Copilot SDK + Cortex AI Ops for secure prototyping
-
-## Threat-Informed Marketing
-- Unit 42 threat research in marketing
-- Educate CxOs on threat landscape
-- **Palo Alto**: Weekly threat demos, real vector simulation to drive urgency
-
-## Champion-Led GTM
-- Enable SEs, architects as evangelists
-- Technical workshops and board-level conversations
-- **Palo Alto**: Architect-led workshops on RAG Security, Zero Trust, SASE+GenAI
-
-## Metrics-Driven Iteration
-- PoC conversion, ARR uplift, churn reduction
-- Security telemetry refines GTM loops
-- **Palo Alto**: Cortex analytics + telemetry = closed-loop GTM dashboard
+- **Use Cases**
+  - Citizen Engagement
+  - Citizen Accountability
+  - Citizen Inclusivity
+  - Citizen Safety
+  - Benefits Distribution
+- **GTM**
+  - **From 2021-22**
+    - Entry Doors
+      - CTO
+      - CISO
+      - CDO
+    - Channels
+      - Direct
+      - Partners
+      - Marketplace
+    - Key Focus
+      - Digital Transformation
+      - Cybersecurity
+      - Data Analytics
+    - Seller Behavior
+      - Tactical & Product-Oriented
+    - Solutions
+      - No-Code AI
+        - Document AI
+        - Contact Center AI (CCAI)
+        - Cloud Translation AI
+      - App Modernization
+        - Apigee + GKE
+        - Migrate less-critical apps to cloud
+        - Competition: AWS, Azure, MuleSoft
+      - Cybersecurity Solutions
+        - App, Infra & Workforce Security
+        - Secure Cloud Foundations
+        - WAAP Solution
+        - Competition: Strong GCAT Team
+      - Data Analytics
+        - BigQuery + Looker
+    - MEDDPICC Challenges
+      - Lack of vertical solutions
+      - product-centric selling
+      - Few direct GCP customer proofs of value
+      - Siloed Paper Process
+      - Relationship selling via champions rather than decision-makers
+  - **From 2022-23**
+    - Entry Doors
+      - CDO
+      - CISO
+      - CTO
+    - Channels: Direct, Partners, Marketplace
+    - Key Focus: Business/Mission Transformation with Data & Cybersecurity
+    - Seller Behavior: Strategic & Data-Modernization Focused
+    - Solutions & Competition
+      - No-Code AI
+        - Document AI
+        - CCAI
+        - Cloud Translation AI
+      - Low-Code AI Platform
+        - Vertex AI (Data Science & MLOps)
+      - Unified Data Platform Modernization
+        - Metadata Management
+        - Data Governance
+        - DataOps
+        - Data Access & Delivery
+        - Apigee + GKE; Serverless Apps
+        - Competition: AWS, Azure, Snowflake, Databricks
+      - Cybersecurity Solutions
+        - App, Infra & Workforce Security
+        - Secure Cloud Foundations
+        - WAAP Solution
+    - Key Challenges (per MEDDPICC)
+      - Early-stage vertical solutions
+      - Some direct GCP customer proofs of value
+      - Delivery partner ecosystem gaps
+      - Compliance shortfalls
+  - **From 2024-25**
+    - Entry Doors
+      - Mayors, Governors, Lobbyists, CTO ↔ CISO ↔ CDO
+    - Channels: Direct, Partners, Marketplace
+    - Key Focus: Mission-Focused Solutions for top use cases in Healthcare, Transport, HigherEd
+    - Seller Behavior: Strategic, Mission-Focused Selling
+    - Unified Platform: Generative AI + Data + Apps + Security
+    - Industry-Focused GTM
