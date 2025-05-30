@@ -28,7 +28,8 @@ markmap:
       - Cybersecurity
       - Data Analytics
     - Seller Behavior
-      - Tactical & Product-Oriented
+      - Tactical
+      - Product-Oriented
     - Solutions
       - No-Code AI
         - Document AI
@@ -56,7 +57,10 @@ markmap:
       - CDO
       - CISO
       - CTO
-    - Channels: Direct, Partners, Marketplace
+    - Channels
+      - Direct
+      - Partners
+      - Marketplace
     - Key Focus: Business/Mission Transformation with Data & Cybersecurity
     - Seller Behavior: Strategic & Data-Modernization Focused
     - Solutions & Competition
@@ -84,9 +88,30 @@ markmap:
       - Compliance shortfalls
   - **From 2024-25**
     - Entry Doors
-      - Mayors, Governors, Lobbyists, CTO ↔ CISO ↔ CDO
-    - Channels: Direct, Partners, Marketplace
-    - Key Focus: Mission-Focused Solutions for top use cases in Healthcare, Transport, HigherEd
-    - Seller Behavior: Strategic, Mission-Focused Selling
-    - Unified Platform: Generative AI + Data + Apps + Security
-    - Industry-Focused GTM
+      - Mayors
+      - Governors
+      - Lobbyists
+      - CTO
+      - CISO
+      - CDO
+    - Channels
+      - Direct
+      - Partners
+      - Marketplace
+    - Key Technical Solution
+      - Unified Gen AI Platform
+    - Key Focus
+      -  Mission-Focused Solutions
+      -  Top use cases
+        -   Healthcare
+        -   Transport
+        -   HigherEd
+    - Seller Behavior
+      - Strategic
+      - Mission-Focused
+      - Veritcal Solutions
+        - Transport
+        - Labor
+        - Healthcare
+    - Pitch
+      - Unified Platform: Generative AI + Data + Apps + Security
