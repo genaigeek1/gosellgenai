@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:S,mm:Q}=window,$=new S.Toolbar;$.attach(Q);const I=$.render();I.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(I)})})()</script><script>((l,U,M,R)=>{const N=l();window.mm=N.Markmap.create("svg#mindmap",(U||N.deriveOptions)(R),M),window.matchMedia("(prefers-color-scheme: dark)").matches&&document.documentElement.classList.add("markmap-dark")})(()=>window.markmap,null,{"content":"&#x1f3d7;&#xfe0f; GCP Blueprints","children":[{"content":"&#x1f9f1; Enterprise Foundation","children":[{"content":"A structured approach to organizing cloud resources for secure, scalable, and compliant operations.","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"<img src=\"https://cloud.google.com/static/architecture/blueprints/security-foundations/images/efb-key-decisions.svg\" alt>","children":[],"payload":{"tag":"li","lines":"9,11"}}],"payload":{"tag":"h3","lines":"7,8"}},{"content":"&#x1f6e1;&#xfe0f; Secure Data Warehouse","children":[{"content":"A modern architecture to store and analyze data securely using BigQuery and VPC-SC.","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"<img src=\"https://cloud.google.com/static/architecture/blueprints/images/sdwv2-structure.svg\" alt>","children":[],"payload":{"tag":"li","lines":"13,15"}}],"payload":{"tag":"h3","lines":"11,12"}},{"content":"&#x1f916; Secure AI (GenAI &amp; MLOps)","children":[{"content":"A blueprint for managing AI/ML pipelines securely, covering training, inference, and data protection.","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<img src=\"https://cloud.google.com/static/architecture/blueprints/genai-mlops-blueprint/images/mlops-architecture.svg\" alt>","children":[],"payload":{"tag":"li","lines":"17,19"}}],"payload":{"tag":"h3","lines":"15,16"}},{"content":"&#x1f4dc; CDMC Data Governance","children":[{"content":"A control framework to govern data ownership, privacy, classification, and compliance.","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"<img src=\"https://cloud.google.com/static/docs/security/images/cdmc/cdmc-architecture.svg\" alt>","children":[],"payload":{"tag":"li","lines":"21,22"}}],"payload":{"tag":"h3","lines":"19,20"}}],"payload":{"tag":"h2","lines":"5,6"}},{"initialExpandLevel":2})</script>
+</body>
+</html>
